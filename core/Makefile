@@ -1009,7 +1009,7 @@ INTERNAL_SYSTEMIMAGE_FILES := $(filter $(TARGET_OUT)/%, \
     $(RECOVERY_RESOURCE_ZIP))
 
 systemimage-squisher: $(INTERNAL_SYSTEMIMAGE_FILES)
-       @echo -e ${CL_CYN}"Optimizing PNGs to Shrink ROM Size!..."${CL_RST}
+       @echo Optimizing PNGs to Shrink ROM Size!...
        $(hide) APKCERTS=$(APKCERTS_FILE) ./vendor/resurrection/tools/squisher
 
 .PHONY: systemimage-squisher
